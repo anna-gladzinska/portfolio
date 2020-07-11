@@ -1,13 +1,158 @@
+/* variables */
+
+$font-color: #aab2bf;
+$font-hover: #fff;
+$font-size: 16px;
+$small-font-size: 12px;
+$bg-color-light: #222831;
+$bg-color-dark: #121519;
+
+
+/* general */
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
-header {
-    background: #121519;
-    background: -webkit-linear-gradient(to bottom, #222831, #121519);
-    background: linear-gradient(to bottom, #222831, #121519);
+body {
+    font-family: 'Inconsolata', monospace;
+    font-size: $font-size;
+}
+
+/* navigation */
+
+nav {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 50px;
+    background: $bg-color-dark;
+    text-transform: uppercase;
+    padding: 0 20px 0 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 0 auto;
+    color: $font-color;
+
+    div {
+        align-self: center;
+        color: $font-hover;
+
+        span {
+            color: $font-color;
+        }
+    }
+
+    ul {
+        display: block;
+        padding: 0;
+        align-self: flex-end;
+        line-height: 50px;
+
+        li {
+            display: inline;
+            padding: 0 10px;
+
+            a {
+                color: $font-color;
+                text-decoration: none;
+
+                &:hover {
+                    color: $font-hover;
+                }
+            }
+        }
+    }
+}
+
+.navigation-mobile {
+    display: none;
+    height: 100%;
+
+    .title {
+        padding: 0 20px;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        color: $font-color;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            flex: 97% 0;
+            align-self: center;
+
+            p:first-of-type {
+                color: $font-hover;
+            }
+
+            p:last-of-type {
+                font-size: $small-font-size;
+            }
+        }
+
+        i {
+            width: 16px;
+            flex: 3% 0;
+            align-self: center;
+            color: $font-color;
+            cursor: pointer;
+
+            &:hover {
+                color: $font-hover;
+            }
+        }
+    }
+}
+
+.dropdown {
+    display: none;
     width: 100vw;
+    background-color: $bg-color-dark;
+    line-height: 50px;
+    padding: 20px 0;
+
+    li {
+        text-align: center;
+        padding: 0 10px;
+
+        a {
+            color: $font-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $font-hover;
+            }
+        }
+    }
+}
+
+.dropdown-show {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .navigation {
+        display: none;
+    }
+
+    .navigation-mobile {
+        display: block;
+    }
+}
+
+/* header */
+
+header {
+    background: $bg-color-dark;
+    background: -webkit-linear-gradient(to bottom, $bg-color-light, $bg-color-dark);
+    background: linear-gradient(to bottom, $bg-color-light, $bg-color-dark);
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -20,9 +165,7 @@ header {
     transform: translate(-50%, -50%);
     width: 480px;
     height: 280px;
-    color: #aab2bf;
-    font-size: 16px;
-    font-family: 'Inconsolata', monospace;
+    color: $font-color;
 }
 
 .part-one {
@@ -234,7 +377,7 @@ header {
 @media (max-width: 420px) {
     .container {
         transform-origin: center;
-        transform: translate(-50%, -50%) rotate(90deg);
+        transform: translate(-50%, -50%) rotate(90deg) scale(0.9);
     }
 
     .link-one,
@@ -278,6 +421,11 @@ header {
 }
 
 @media (min-width: 500px) and (max-width: 667px) {
+    .container {
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
 
     .link-one {
         top: 30px;
@@ -288,4 +436,16 @@ header {
         bottom: -10px;
         right: 30px;
     }
+}
+
+@media (min-width: 668px) and (max-width: 823px) {
+    .container {
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+}
+
+#aboutme {
+    height: 100vh;
 }
