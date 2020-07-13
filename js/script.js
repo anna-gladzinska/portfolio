@@ -9,13 +9,16 @@ menu.addEventListener('click', function () {
 })
 
 const nav = document.querySelector('nav');
-console.log(nav.scrollTop);
+const ul = document.querySelector('.nav-ul');
 
 document.addEventListener("scroll", function () {
-  // console.log(window.scrollY);
   if (window.scrollY > 0) {
     nav.classList.add('nav-bg');
+    ul.classList.add('nav-ul-show');
   } else {
     nav.classList.remove('nav-bg');
+    ul.classList.remove('nav-ul-show');
   }
 });
+
+const scroll = new SmoothScroll('a[href*="#"]');
