@@ -44,8 +44,14 @@ nav {
         align-self: center;
         color: $font-hover;
 
-        span {
-            color: $font-color;
+        h1 {
+            color: $font-hover;
+            font-size: $font-size;
+            font-weight: normal;
+
+            span {
+                color: $font-color;
+            }
         }
     }
 
@@ -88,12 +94,15 @@ nav {
             flex: 97% 0;
             align-self: center;
 
-            p:first-of-type {
+            h1 {
                 color: $font-hover;
+                font-size: $font-size;
+                font-weight: normal;
             }
 
-            p:last-of-type {
+            h2 {
                 font-size: $small-font-size;
+                font-weight: normal;
             }
         }
 
@@ -445,6 +454,8 @@ header {
         transform: translate(-50%, -50%) scale(0.9);
     }
 }
+
+/* sections */
 
 #aboutme {
     height: 100vh;
