@@ -488,7 +488,6 @@ header {
 
 .section-wrapper {
     max-width: 1100px;
-    height: 100vh;
     margin: 0 auto;
     padding: 50px 0;
     color: $font-color;
@@ -500,5 +499,35 @@ header {
         font-size: $font-size-large;
         text-transform: uppercase;
         color: $font-hover;
+    }
+}
+
+.skills-title {
+    font-size: $font-size-medium;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: $font-hover;
+    padding: 30px 0;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    background: -webkit-linear-gradient(to top, $bg-color-light, $bg-color-dark);
+    background: linear-gradient(to top, $bg-color-light, $bg-color-dark);
+    position: relative;
+}
+
+.skills-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 16.66% 0;
+    font-size: $font-size-medium;
+
+    i {
+        font-size: 80px;
+        padding: 10px 0;
     }
 }
