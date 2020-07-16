@@ -493,12 +493,20 @@ header {
     color: $font-color;
     font-size: $font-size-medium;
 
+
     h2 {
         padding: 10px 0;
         font-weight: normal;
         font-size: $font-size-large;
         text-transform: uppercase;
         color: $font-hover;
+    }
+
+    p {
+        background: -webkit-linear-gradient(to top, $bg-color-light, $bg-color-dark);
+        background: linear-gradient(to top, $bg-color-light, $bg-color-dark);
+        padding: 30px;
+        line-height: 22px;
     }
 }
 
