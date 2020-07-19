@@ -624,3 +624,25 @@ header {
         }
     }
 }
+
+.contact-wrapper {
+    padding: 30px 0;
+    text-align: center;
+    background: -webkit-linear-gradient(to top, $bg-color-light, $bg-color-dark);
+    background: linear-gradient(to top, $bg-color-light, $bg-color-dark);
+
+    a {
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: $font-color;
+
+        &:hover {
+            color: $font-hover;
+        }
+
+        i {
+            margin: 0 10px 0 0;
+        }
+    }
+}
