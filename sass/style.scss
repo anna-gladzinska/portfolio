@@ -74,6 +74,10 @@ nav {
             }
         }
     }
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .nav-ul {
@@ -121,6 +125,10 @@ nav {
             flex: 97% 0;
             align-self: center;
 
+            a {
+                text-decoration: none;
+            }
+
             h1 {
                 color: $font-hover;
                 font-size: $font-size;
@@ -128,6 +136,7 @@ nav {
             }
 
             h2 {
+                color: $font-color;
                 font-size: $font-size-small;
                 font-weight: normal;
             }
@@ -533,7 +542,6 @@ header {
     flex-direction: column;
     align-items: center;
     flex: 16.66% 0;
-    font-size: $font-size-medium;
 
     i {
         font-size: 80px;
@@ -645,4 +653,17 @@ header {
             margin: 0 10px 0 0;
         }
     }
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background: -webkit-linear-gradient(to top, $bg-color-light, $bg-color-dark);
+    background: linear-gradient(to top, $bg-color-light, $bg-color-dark);
+    text-align: center;
+    text-transform: uppercase;
+    color: $font-hover;
+    font-size: $font-size;
 }
