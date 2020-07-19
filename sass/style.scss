@@ -498,7 +498,7 @@ header {
 .section-wrapper {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
     color: $font-color;
     font-size: $font-size-medium;
 
@@ -556,7 +556,6 @@ header {
 }
 
 .projects-box {
-
     display: flex;
     flex-direction: column;
     flex: 45% 0;
@@ -569,6 +568,7 @@ header {
         padding: 10px 0;
 
         &:first-of-type {
+            text-transform: uppercase;
             color: $font-hover;
         }
     }
@@ -655,15 +655,85 @@ header {
     }
 }
 
+@media (max-width: 1024px) {
+    .section-wrapper {
+        padding: 50px 0 0 0;
+
+        h2 {
+            padding: 10px 30px;
+        }
+    }
+
+    .aboutme {
+        p {
+            padding: 10px 30px 40px 30px;
+        }
+    }
+
+    .skills-title {
+        padding: 30px 30px 0 30px;
+    }
+
+    .skills-wrapper {
+        padding: 30px 30px;
+        justify-content: space-between;
+    }
+
+    .skills-box {
+        flex: 1;
+        text-align: center;
+
+        i {
+            font-size: 50px;
+            padding: 20px;
+        }
+    }
+
+    .projects-box {
+        flex: 100%;
+        padding: 0 30px;
+
+        p {
+            padding: 30px 0;
+            margin: 30px 0 0 0;
+        }
+    }
+
+    .projects-image {
+        overflow: visible;
+
+        img {
+            max-width: 500px;
+            max-height: 200px;
+        }
+
+        &:after {
+            opacity: 0;
+        }
+
+        &:hover:after {
+            opacity: 0;
+        }
+
+        &:hover .projects-links {
+            opacity: 1;
+        }
+    }
+
+    .projects-links {
+        top: 100%;
+        margin: 30px 0 0 0;
+        opacity: 1;
+    }
+}
+
 /* footer */
 
 footer {
     width: 100%;
     padding: 20px 0;
-    background: -webkit-linear-gradient(to top, $bg-color-light, $bg-color-dark);
-    background: linear-gradient(to top, $bg-color-light, $bg-color-dark);
     text-align: center;
     text-transform: uppercase;
-    color: $font-hover;
+    color: $font-color;
     font-size: $font-size;
 }
