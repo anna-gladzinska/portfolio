@@ -431,7 +431,7 @@ header {
 
 // stars animation is based on Parallax Stars by https://codepen.io/saransh
 
-@media (max-width: 420px) {
+@media (max-width: 510px) {
     .container {
         transform-origin: center;
         transform: translate(-50%, -50%) rotate(90deg) scale(0.9);
